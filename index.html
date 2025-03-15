@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <!-- Font Classifier -->
 
     <style>
@@ -22,12 +25,13 @@
     </style>
 </head>
 
-<body class="sora-font">
+<body class="sora-font mb-12 lg:mb-[140]">
     <header class="bg-gradient-to-t from-[rgba(239,235,227,1)] to-white">
-        <nav class="px-32 py-6 ">
-            <div class="flex justify-between items-center">
+        <!-- nav for large screen -->
+        <nav class="lg:px-32 lg:py-6 lg:mb-12">
+            <div class="lg:flex lg:justify-between lg:items-center hidden">
                 <img src="c2-assets/logo-header.png" alt="">
-                <ul class="flex gap-6 text-[rgba(17,17,17,1)] text-xl">
+                <ul class="flex gap-6 text-[rgba(17,17,17,1)] text-xl ">
                     <a href="">
                         <li>Product</li>
                     </a>
@@ -62,6 +66,21 @@
                 </div>
             </div>
         </nav>
+        <!-- nav for small screen -->
+         <nav class="px-4 py-3">
+            <div class="flex justify-between mx-auto lg:hidden">
+                <img class="w-7 h-7" src="c2-assets/Screenshot 2025-03-16 043811.png " alt="">
+                <i class="fa-solid fa-bars w-7 h-7 text-[#179800] text-2xl"></i>
+            </div>
+         </nav>
+         <hr class="border-t-1 border-[#179800] lg:hidden mb-12">
+        <!-- banner section -->
+         <div class="lg:px-96 flex flex-col text-center">
+            <h1 class="text-3xl lg:text-5xl font-semibold mb-4 lg:mb-8">Freshness <span class="text-[#179800]">You Can</span><br>
+                <span class="text-[#179800]">Count</span> On, Prices You’ll Love!</h1>
+            <p class="text-[rgba(17,17,17,1) opacity-80 text-[16] lg:text-xl font-light lg:font-normal mb-4 lg:mb-9 mx-2">Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you covered every day!</p>
+            <img class="w-full" src="c2-assets/hero-vegetables.png" alt="">
+         </div>
     </header>
     <main>
     </main>
