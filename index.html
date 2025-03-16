@@ -32,6 +32,7 @@
         .poppins-font {
             font-family: "Poppins", sans-serif;
         }
+        /* banner section animation */
 
         @keyframes slide-left-right {
             0% {
@@ -53,6 +54,22 @@
             100% {
                 transform: translateX(0);
             }
+        }
+
+        /* Delivery Section Animation */
+        @keyframes drive {
+            0% { right: -10%; }
+            100% { right: 110%; }
+        }
+
+        .car-animation {
+            position: absolute;
+            bottom: 10px;
+            right: -10%;
+            animation: drive 5s linear infinite;
+            font-size: 3rem;
+            color: black;
+            z-index: 30;
         }
     </style>
 </head>
@@ -344,7 +361,7 @@
         </section>
 
         <!-- new delivery location section is here -->
-         <section class="lg:mt-32 mt-10 lg:px-32 px-4 lg:pt-32 pt-12 lg:pb-[363px] pb-[282px] overflow-hidden sora-font bg-gradient-to-b from-orange-200 to-orange-100">
+         <section class="lg:mt-32 mt-10 lg:px-32 px-4 lg:pt-32 pt-12 pb-[80px] overflow-hidden sora-font bg-gradient-to-b from-orange-200 to-orange-100">
             <h3 class="text-white text-2xl lg:text-4xl font-semibold mb-8 lg:mb-12">Delivery Locations</h3>
             <div class="flex lg:flex-row flex-col justify-evenly">
                 <!-- location card 1-->
@@ -354,14 +371,26 @@
                 <!-- location card 3-->
                  <button class="text-white font-semibold bg-red-400 rounded-lg p-5 w-32 text-center hover:bg-red-800 lg:mb-0 mb-5">Sylhet</button>
             </div>
-            <i class="fa-solid fa-car-side fa-flip-horizontal pt-20 flex items-end"></i>
+            <div class="car-animation relative">
+                <i class="fa-solid fa-car-side fa-flip-horizontal pt-20 flex items-end "></i>
+            </div>
+            
          </section>
 
-         <!-- the overlapping section starts here -->
+         <!-- the wannabe overlapping section starts here -->
+          <section class="bg-[rgba(239,235,227,1)] relative z-10 lg:mt-32 mt-10 lg:px-auto px-4 lg:pt-24 pt-12 overflow-hidden flex-col flex lg:flex-row lg:gap-8 sora-font text-center lg:text-start rounded-xl lg:mx-32 mx-4 mb-32">
+            <img class="lg:pl-[40px] mt-12 mb-6 items-center" src="c2-assets/vegetable-busket.png" alt="">
+            <div class="flex flex-col lg:items-start items-center">
+                <h3 class="mt-[97px] lg:mb-[22px] lg:font-semibold lg:text-[rgba(17,17,17,1)] lg:text-xl font-bold text-xl text-[rgba(23,152,0,1)] mb-5">Get Grocery News!</h3>
+                <p class="mb-5 lg:mb-9">Exclusive training tips, ticks, product deals and more.</p>
+                <input type="text" placeholder="Enter Email" class="text-[rgba(196,196,196,1)] py-4 pl-4 rounded-lg mb-3 lg:mb-9 w-full h-[67px]">
+                <button class="bg-[rgba(23,152,0,1)] px-3 py-2 lg:items-start w-[164px] h-[45px] text-white rounded-lg lg:mb-0 mb-10">Subscribe</button>
+            </div>
+          </section>
     </main>
     <footer class="bg-[#179800] sora-font">
         <div class="lg:px-32 px-4 lg:pt-32 pt-12 lg:pb-12 pb-8 overflow-hidden sora-font">
-            <div class="flex lg:flex-row lg:justify-between flex-col pt-[281px] lg:pt-[408px] lg:pb-[80px]">
+            <div class="flex lg:flex-row lg:justify-between flex-col pt-[50px] lg:pt-[50px] lg:pb-[50px]">
                 <div class="flex flex-col">
                     <img class="w-[154px] h-[60px] mb-2" src="c2-assets/logo-footer.png" alt="">
                     <p class="text-white text-xl w-[426px] h-[75px] lg:mb-0 mb-9">Discover a world of treats, toys, and essentials handpicked for your furry friends</p>
